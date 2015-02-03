@@ -18,13 +18,14 @@ SOURCES += src/harbour-fourbrowse.cpp
 
 OTHER_FILES += qml/harbour-fourbrowse.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/harbour-fourbrowse.changes.in \
     rpm/harbour-fourbrowse.spec \
     rpm/harbour-fourbrowse.yaml \
     translations/*.ts \
-    harbour-fourbrowse.desktop
+    harbour-fourbrowse.desktop \
+    qml/pages/MainPage.qml \
+    qml/JSONListModel/jsonpath.js \
+    qml/JSONListModel/JSONListModel.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
