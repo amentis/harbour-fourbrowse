@@ -30,15 +30,9 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "../JSONListModel"
 
 Page {
     id: root
-
-    JSONListModel {
-        id: threadsModel
-        source: "https://a.4cdn.org/b/1.json"
-    }
 
     SilicaListView {
         id: threadsList

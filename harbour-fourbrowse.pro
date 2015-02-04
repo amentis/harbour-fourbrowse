@@ -14,7 +14,8 @@ TARGET = harbour-fourbrowse
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-fourbrowse.cpp
+SOURCES += src/harbour-fourbrowse.cpp \
+    src/backend.cpp
 
 OTHER_FILES += qml/harbour-fourbrowse.qml \
     qml/cover/CoverPage.qml \
@@ -23,12 +24,14 @@ OTHER_FILES += qml/harbour-fourbrowse.qml \
     rpm/harbour-fourbrowse.yaml \
     translations/*.ts \
     harbour-fourbrowse.desktop \
-    qml/pages/MainPage.qml \
-    qml/JSONListModel/jsonpath.js \
-    qml/JSONListModel/JSONListModel.qml
+    qml/pages/MainPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-fourbrowse-de.ts
 
+HEADERS += \
+    src/backend.h
+
+QT += network
