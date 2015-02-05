@@ -15,7 +15,8 @@ TARGET = harbour-fourbrowse
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-fourbrowse.cpp \
-    src/backend.cpp
+    src/backend.cpp \
+    src/thread.cpp
 
 OTHER_FILES += qml/harbour-fourbrowse.qml \
     qml/cover/CoverPage.qml \
@@ -32,6 +33,7 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-fourbrowse-de.ts
 
 HEADERS += \
-    src/backend.h
+    src/backend.h \
+    src/thread.h
 
 QT += network

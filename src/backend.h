@@ -10,7 +10,10 @@
 #include <QNetworkReply>
 #include <QUrl>
 #include <QJsonObject>
+#include <QJsonArray>
 #include <QJsonDocument>
+
+#include "thread.h"
 
 class Backend : public QObject
 {

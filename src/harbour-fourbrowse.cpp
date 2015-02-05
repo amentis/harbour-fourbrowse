@@ -34,6 +34,7 @@
 
 #include <sailfishapp.h>
 #include "backend.h"
+#include "thread.h"
 
 
 int main(int argc, char *argv[])
@@ -43,7 +44,9 @@ int main(int argc, char *argv[])
 
     Backend* backend = new Backend(application);
 
-    backend->listThreads("b");
+    view->rootContext()->setContextProperty("backend", backend);
+
+    qmlRegisterType<Thread>("com.ivanbratoev.fourbrowse", 1, 0, "Thread");
 
     QObject::connect(application, SIGNAL(aboutToQuit()), backend, SLOT(deleteLater()));
 
